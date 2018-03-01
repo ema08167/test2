@@ -14,6 +14,14 @@ import com.opensymphony.xwork2.ActionSupport;
 		private BuyItemCompleteDAO buyItemCompleteDAO=new BuyItemCompleteDAO();
 
 		public String execute()throws SQLException{
+			System.out.println("----------------");
+			System.out.println(session.get("id").toString());
+			System.out.println(session.get("login_user_id").toString());
+			System.out.println(session.get("total_price").toString());
+			System.out.println(session.get("count").toString());
+			System.out.println(session.get("pay").toString());
+			System.out.println("----------------");
+
 			buyItemCompleteDAO.buyItemInfo(
 					session.get("id").toString(),
 					session.get("login_user_id").toString(),
@@ -28,5 +36,10 @@ import com.opensymphony.xwork2.ActionSupport;
 		public void setSession(Map<String,Object> session){
 		this.session=session;
 	}
+
+		public Map<String, Object> getSession() {
+			return session;
+		}
+
 
 }

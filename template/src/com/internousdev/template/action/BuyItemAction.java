@@ -12,6 +12,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public Map<String,Object> session;
 	private String result;
 
+
 	public String execute(){
 		result=SUCCESS;
 
@@ -49,4 +50,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public void setSession(Map<String, Object>session){
 		this.session=session;
 	}
-}
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	}
+

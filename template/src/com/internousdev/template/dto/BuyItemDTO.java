@@ -26,6 +26,7 @@ package com.internousdev.template.dto;
 		}
 
 		public void setId(int id){
+			this.id=id;
 	}
 
 

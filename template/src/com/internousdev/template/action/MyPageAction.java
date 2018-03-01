@@ -20,9 +20,12 @@ import com.opensymphony.xwork2.ActionSupport;
 			if(deleteFig==null){
 			String item_transaction_id=session.get("id").toString();
 			String user_master_id=session.get("login_user_id").toString();
-
+			System.out.println(item_transaction_id);
+			System.out.println(user_master_id);
 			myPageDTO=myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
 			session.put("buyItem_name",myPageDTO.getItemName() );
+			System.out.println("TEST");
+			System.out.println(session.get("buyItem_name"));
 			session.put("total_price", myPageDTO.getTotalPrice());
 			session.put("total_count", myPageDTO.getTotalCount());
 			session.put("total_payment", myPageDTO.getPayment());
@@ -60,4 +63,9 @@ import com.opensymphony.xwork2.ActionSupport;
 		public void setSession(Map<String,Object> loginSessionMap){
 			this.session=loginSessionMap;
 	}
+
+		public Map<String, Object> getSession() {
+			return session;
+		}
+
 }

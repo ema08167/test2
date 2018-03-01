@@ -10,7 +10,7 @@
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <title>UserCreate画面</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet "type="text/css" href="./css/style.css">
 </head>
 <body>
 <div id="header">
@@ -24,7 +24,7 @@
 </div>
 
 <div>
-<s:if test="errorMessage" !="">
+<s:if test="errorMessage!=''">
 <s:property value="errorMessage" escape="false"/>
 </s:if>
 

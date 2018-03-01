@@ -56,4 +56,10 @@ import com.opensymphony.xwork2.ActionSupport;
 			this.session=session;
 	}
 
+		public Map<String, Object> getSession() {
+			return session;
+		}
+
+
+
 }

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
     <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
@@ -12,6 +12,13 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <title>BuyItemConfirm画面</title>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+<script>
+function submitAction(url) {
+	  $('form').attr('action', url);
+	  $('form').submit();
+	}
+</script>
 </head>
 
 <body>
